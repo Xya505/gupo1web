@@ -1,0 +1,126 @@
+:root {
+    --color-principal: #0074b8;
+    --color-fondo: #f0f0f0;
+    --color-texto: white;
+    --color-secundario: #ddd;
+    --color-ayuda: #282a2c;
+    --fuente-principal: Arial, sans-serif;
+    --padding: 20px;
+    --borde-redondeado: 5px;
+    --borde-espaciado: 10px;
+  }
+  
+  body {
+    font-family: var(--fuente-principal);
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-fondo);
+  }
+  
+  header {
+    background-color: var(--color-principal);
+    color: var(--color-texto);
+    text-align: center;
+    padding: var(--padding);
+    position: relative;
+  }
+  
+  .atras {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  
+  .back-button {
+    background: none;
+    border: none;
+    color: var(--color-texto);
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .icono-tareas {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    margin-right: var(--borde-espaciado);
+  }
+  
+  .icono-tareas img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--padding);
+  }
+  
+  .perfil {
+    background-color: white;
+    margin-bottom: var(--borde-espaciado);
+    padding: var(--padding);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .perfil-info img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: var(--borde-espaciado);
+  }
+  
+  .editar {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .opciones-editar select {
+    width: 100%;
+    padding: 5px;
+    margin-top: 10px;
+    border: 1px solid var(--color-secundario);
+    border-radius: var(--borde-redondeado);
+  }
+  
+  .clases {
+    background-color: white;
+    padding: var(--padding);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .clase {
+    border: 1px solid var(--color-secundario);
+    padding: var(--borde-espaciado);
+    margin: var(--borde-espaciado) 0;
+  }
+  
+  footer {
+    background-color: var(--color-principal);
+    color: var(--color-texto);
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .icono-ayuda {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: var(--color-ayuda);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .icono-ayuda img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  
