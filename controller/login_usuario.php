@@ -9,17 +9,17 @@ $contrasena = hash('sha512', $contrasena);
 $validar_login = mysqli_query($conexion, "SELECT * FROM usuarios WHERE correo='$correo' and contrasena='$contrasena'");
 
 if(mysqli_num_rows($validar_login) > 0) {
-    $filas = mysqli_fetch_array($validar_login); // Obtener la fila de la consulta
+    $filas = mysqli_fetch_array($validar_login); 
 
     $_SESSION['usuario'] = $correo;
 
-    if ($filas['rol'] == 1) { // Admin
-        header("location:../views/docente.php");
-    } elseif ($filas['rol'] == 2) { // Estudiante
-        header("location:../views/plataforma.php");
+    if ($filas['rol'] == 1) { 
+        header("location:../models/plataforma_admin/index.php");
+    } elseif ($filas['rol'] == 2) {
+        header("location:../models/plataforma_estudiante/index.php");
     } else {
-        header("location:../views/index.php");
-        exit; // Salir del script después de redireccionar
+        header("location: ../../views/index.php"); 
+        exit; 
     }
 } else {
     echo '
@@ -39,4 +39,6 @@ if(mysqli_num_rows($validar_login) > 0) {
     ';
     exit;
 }
+?>
+
 
